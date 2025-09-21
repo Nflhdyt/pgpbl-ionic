@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true">
+  <div class="class-section">
+
+  </div>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Login</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-input
+          label="Email" [(ngModel)]="email"
+          labelPlacement="floating"
+          placeholder="Enter your email"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input
+          [(ngModel)]="password" type="password"
+          label="password"
+          labelPlacement="floating"
+          placeholder="Enter your password"
+          ><ion-input-password-toggle slot="end"></ion-input-password-toggle
+        ></ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="login()">LOGIN</ion-button>
+      <ion-button expand="block" fill="clear" routerLink="/register">Register</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

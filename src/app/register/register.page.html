@@ -1,0 +1,62 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <div class="register-container">
+
+    <ion-card>
+      <ion-card-header class="ion-text-center">
+        <ion-card-title>Register</ion-card-title>
+        <ion-card-subtitle>Buat akun baru Anda</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <!-- Email -->
+        <ion-item>
+          <ion-input
+            [(ngModel)]="email"
+            label="Email"
+            labelPlacement="floating"
+            type="email"
+            placeholder="Enter your email">
+          </ion-input>
+        </ion-item>
+
+        <!-- Password -->
+        <ion-item>
+          <ion-input
+            [(ngModel)]="password"
+            label="Password"
+            labelPlacement="floating"
+            type="password"
+            placeholder="Enter your password">
+            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+          </ion-input>
+        </ion-item>
+
+        <!-- Confirm Password -->
+        <ion-item>
+          <ion-input
+            [(ngModel)]="confirmPassword"
+            label="Confirm Password"
+            labelPlacement="floating"
+            type="password"
+            placeholder="Confirm your password">
+            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+          </ion-input>
+        </ion-item>
+
+        <ion-button expand="block" class="ion-margin-top" (click)="register()">
+          Register
+        </ion-button>
+
+        <div class="ion-text-center ion-margin-top">
+          <p>Sudah punya akun?
+            <a routerLink="/login">Login</a>
+          </p>
+        </div>
+
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
+</ion-content>
